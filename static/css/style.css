@@ -1,0 +1,133 @@
+/* Header stilini düzenle */
+.header {
+    background-color: green;
+    /* Yeşil arka plan */
+    text-align: center;
+    /* Ortalamayı sağlar */
+    padding: 50px;
+    /* Üst ve alt boşluk */
+    color: white;
+    /* Yazı rengi beyaz */
+}
+
+h1 {
+    margin: 0;
+    /* Başlığın etrafındaki boşlukları kaldır */
+    font-size: 3em;
+    /* Başlık boyutunu büyüt */
+}
+
+/* Genel vücut ve metin rengi */
+body {
+    background-color: #f7fafc;
+    /* Gri tonunda arka plan */
+    font-family: 'Sans-serif';
+    /* Yazı tipi */
+    color: #2d3748;
+    /* Metin rengi */
+}
+
+/* Başlık kısmı için stil */
+header {
+    background-color: #48bb78;
+    /* Yeşil arka plan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge efekti */
+}
+
+header h1 {
+    font-size: 2rem;
+    /* Başlık boyutu */
+    font-weight: 700;
+    /* Kalın yazı */
+    color: white;
+    /* Beyaz yazı rengi */
+    text-align: center;
+    /* Ortalanmış yazı */
+    padding: 1.5rem 0;
+    /* Üst ve alt boşluk */
+}
+
+/* Ana içerik kısmı */
+main {
+    max-width: 1024px;
+    /* Maksimum genişlik */
+    margin: 2.5rem auto;
+    /* Ortalamak için */
+    padding: 0 1rem;
+    /* Sağ ve sol boşluk */
+    text-align: center;
+    /* Ortalanmış yazı */
+}
+
+main h2 {
+    font-size: 1.5rem;
+    /* Alt başlık boyutu */
+    font-weight: 600;
+    /* Orta kalınlıkta yazı */
+    margin-bottom: 1.5rem;
+    /* Alt boşluk */
+    color: #2d3748;
+    /* Metin rengi */
+}
+
+main p {
+    font-size: 1rem;
+    /* Paragraf yazı boyutu */
+    color: #718096;
+    /* Gri metin rengi */
+    margin-bottom: 2.5rem;
+    /* Alt boşluk */
+}
+
+/* Butonlar */
+a {
+    padding: 0.75rem 1.5rem;
+    /* Buton içindeki boşluklar */
+    border-radius: 1rem;
+    /* Yuvarlak köşeler */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Gölge efekti */
+    transition: background-color 0.3s ease;
+    /* Geçiş efekti */
+    font-size: 1.125rem;
+    /* Buton yazı boyutu */
+    font-weight: 500;
+    /* Orta kalınlıkta yazı */
+}
+
+a:hover {
+    background-color: #f0e5e5;
+    /* Hover efekti ile renk değişikliği */
+}
+
+/* Renkli butonlar */
+.bg-red-200 {
+    background-color: #fed7d7;
+}
+
+.bg-blue-200 {
+    background-color: #c3dafe;
+}
+
+.bg-yellow-200 {
+    background-color: #fefcbf;
+}
+
+.bg-green-200 {
+    background-color: #c6f6d5;
+}
+
+.bg-purple-200 {
+    background-color: #e9d8fd;
+}
+
+/* Footer kısmı */
+footer {
+    margin-top: 5rem;
+    text-align: center;
+    color: #718096;
+    /* Gri metin rengi */
+    font-size: 0.875rem;
+    /* Küçük yazı boyutu */
+}

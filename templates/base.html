@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Muscle Map{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    
+    <header class="bg-green-500 shadow">
+        <div class="max-w-7xl mx-auto py-6 px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white">Muscle Map</h1>
+            <div class="space-x-6">
+                <a href="{% url 'home' %}" class="text-white hover:text-gray-300">Anasayfa</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'my_exercises' %}" class="text-white hover:text-gray-300">Egzersizlerim</a>
+                    <a href="{% url 'logout' %}" class="text-white hover:text-gray-300">Çıkış Yap</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="text-white hover:text-gray-300">Giriş Yap</a>
+                    <a href="{% url 'register' %}" class="text-white hover:text-gray-300">Kayıt Ol</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="max-w-4xl mx-auto mt-10 px-4">
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <footer class="mt-20 text-center text-gray-500 text-sm">
+        &copy; 2025 Muscle Map. Tüm hakları saklıdır.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% csrf_token %}
+
+{% block title %}Giriş Yap{% endblock %}
+
+{% block content %}
+    <div class="max-w-md mx-auto">
+        <h2 class="text-2xl font-semibold text-center mb-4">Giriş Yap</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg w-full">Giriş Yap</button>
+        </form>
+    </div>
+{% endblock %}

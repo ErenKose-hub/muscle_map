@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Anasayfa{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h2 class="text-2xl font-semibold mb-6">Vücudundaki kas gruplarını keşfet!</h2>
+        <p class="mb-10 text-gray-600">Bir kas grubuna tıklayarak ona özel egzersizleri görebilirsin.</p>
+
+        
+        <div class="relative inline-block mb-10">
+            
+            <svg class="w-72 h-96" viewBox="0 0 100 150">
+                
+                <circle cx="50" cy="25" r="8" class="fill-gray-400" />
+                
+                <rect x="45" y="33" width="10" height="30" class="fill-gray-400" />
+                
+                <rect x="35" y="63" width="10" height="25" class="fill-red-500 cursor-pointer hover:fill-red-600" onclick="window.location.href='{% url 'muscle_detail' 'kollar' %}'"/>
+                <rect x="55" y="63" width="10" height="25" class="fill-red-500 cursor-pointer hover:fill-red-600" onclick="window.location.href='{% url 'muscle_detail' 'kollar' %}'"/>
+                
+                <rect x="40" y="95" width="10" height="25" class="fill-blue-500 cursor-pointer hover:fill-blue-600" onclick="window.location.href='{% url 'muscle_detail' 'bacak' %}'"/>
+                <rect x="50" y="95" width="10" height="25" class="fill-blue-500 cursor-pointer hover:fill-blue-600" onclick="window.location.href='{% url 'muscle_detail' 'bacak' %}'"/>
+            </svg>
+        </div>
+
+        
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="{% url 'muscle_detail' 'gogus' %}" class="bg-red-200 hover:bg-red-300 px-6 py-3 rounded-xl shadow">
+                Göğüs
+            </a>
+            <a href="{% url 'muscle_detail' 'sirt' %}" class="bg-blue-200 hover:bg-blue-300 px-6 py-3 rounded-xl shadow">
+                Sırt
+            </a>
+            <a href="{% url 'muscle_detail' 'kollar' %}" class="bg-yellow-200 hover:bg-yellow-300 px-6 py-3 rounded-xl shadow">
+                Kollar
+            </a>
+            <a href="{% url 'muscle_detail' 'omuz' %}" class="bg-yellow-200 hover:bg-yellow-300 px-6 py-3 rounded-xl shadow">
+                Omuz
+            </a>
+            <a href="{% url 'muscle_detail' 'bacak' %}" class="bg-green-200 hover:bg-green-300 px-6 py-3 rounded-xl shadow">
+                Bacak
+            </a>
+            <a href="{% url 'muscle_detail' 'karin' %}" class="bg-purple-200 hover:bg-purple-300 px-6 py-3 rounded-xl shadow">
+                Karın
+            </a>
+        </div>
+    </div>
+{% endblock %}
