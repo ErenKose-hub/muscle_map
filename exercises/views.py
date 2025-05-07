@@ -19,11 +19,6 @@ def muscle_detail(request, muscle_name):
     )
 
 
-def exercise_detail(request, exercise_id):
-    exercise = get_object_or_404(Exercise, id=exercise_id)
-    return render(request, "exercise_detail.html", {"exercise": exercise})
-
-
 def register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
